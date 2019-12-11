@@ -1,5 +1,5 @@
  -------------------------------------------------------------
-IMage fitting
+Image fitting
 -------------------------------------------------------------
   @override
   Widget build(BuildContext context) {
@@ -72,4 +72,18 @@ IMage fitting
       ),
     );
       
+  }
+
+
+=============================================================================================
+SizeBox: Image.file()
+Note:
+picking image from gallary
+=============================================================================================
+
+   Widget buildImageRow(BuildContext context, File file) {
+    return SizedBox(
+        height: 500.0,
+        child: Image.file(file, fit: BoxFit.fitWidth,)
+    );
   }
