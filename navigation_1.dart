@@ -21,6 +21,15 @@ RaisedButton(
             )
 
 
+----------------pushReplacement Route------------------------
+        Navigator. pushReplacement(
+          context,
+            MaterialPageRoute(
+              builder: (context) => TextEditor(desText,widget._file),
+            ),
+      );
+
+
 ---------------- named Route------------------------
 
 // Pushing a named route
