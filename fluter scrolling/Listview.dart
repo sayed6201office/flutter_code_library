@@ -128,3 +128,24 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+------------------------------------------------------------------------------------
+Listview traversing using for loop
+------------------------------------------------------------------------------------
+child: Row(
+              children: <Widget>[
+                for (final guest in guests)
+                  Padding(
+                    padding: const EdgeInsets.all(8),
+                    child: ClipOval(
+                      child: Image.asset(
+                        guest.imagePath,
+                        width: 90,
+                        height: 90,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
