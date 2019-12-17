@@ -11,3 +11,16 @@ share(BuildContext context, String title, String data) {
         subject: data,
         sharePositionOrigin: box.localToGlobal(Offset.zero) & box.size);
   }
+
+
+=============================================================================================
+Url Loading with Browser...
+=============================================================================================
+  _launchURL() async {
+  const url = 'https://flutter.io';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
