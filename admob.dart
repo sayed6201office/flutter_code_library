@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 /*
 ===========================================================================================
 Local app cardview design
 ===========================================================================================
 */
+=======
+=============================
+from home pc
+============================
+
+>>>>>>> a75e7e152ffa214982c48856643019475e5394ac
 import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_text_converter/styleguide.dart';
