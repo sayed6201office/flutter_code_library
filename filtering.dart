@@ -89,3 +89,10 @@ setState(() {
 _favoriteMeals.add(
           DUMMY_MEALS.firstWhere((meal) => meal.id == mealId),
         );
+
+filtering
+-----------------------------------------------------------
+
+          Product findById(String id) {
+    return _items.firstWhere((prod) => prod.id == id);
+  }

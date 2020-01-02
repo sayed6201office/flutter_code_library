@@ -1,3 +1,6 @@
+=============================================================================================
+Named Route defining
+=============================================================================================
 import 'package:flutter/material.dart';
 
 import './screens/meal_detail_screen.dart';
@@ -54,3 +57,20 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+---------------- named Route Navigation------------------------
+
+// Pushing a named route
+Navigator.of(context).pushNamed(
+  '/second',
+  arguments: 'Hello there from the first page!',
+);
+
+
+=============================================================================================
+Retrieving Data in Screen
+=============================================================================================
+
+final productId =
+        ModalRoute.of(context).settings.arguments as String; 
