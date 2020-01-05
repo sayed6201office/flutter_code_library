@@ -43,13 +43,13 @@ class MyApp extends StatelessWidget {
 }
 
 /*
-Listening Chnages and updating the data
+Listening Chnages and updating the data, Consumer and Provider Listens to the changes-------
 Consumer: you can wrap the content under Consumer that requires to update after change, it will always rebuild..
 Provider.of<Product>(context): set it to false if you dont need to notify
 ---------------------------------------------------------------------------------------
 */
 
-    //final productsContainer =  Provider.of<Products>(context , listen: false);
+//final productsContainer =  Provider.of<Products>(context , listen: false);
     final product = Provider.of<Product>(context);
     return Consumer<Product>(
       builder: (ctx, product, child) => ClipRRect(

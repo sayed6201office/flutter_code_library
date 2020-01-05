@@ -9,7 +9,7 @@ when clicked animation can be displayed
       onTap: () => selectCategory(context),
       splashColor: Theme.of(context).primaryColor,
       
-      //radius for click animation
+      //radius for click animation------------------
       borderRadius: BorderRadius.circular(15),
       child: Container(
         padding: const EdgeInsets.all(15),
