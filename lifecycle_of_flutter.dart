@@ -15,12 +15,28 @@ class HistoryListWidget extends StatefulWidget {
 
 class HistoryListWidgetState extends State<HistoryListWidget> {
 
-	  @override
-	  initState() {
-	   super.initState();
-	   // Add listeners to this class
-	    query();
-	  }
+//context cant be accessed--------------------------------------------
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //through this a[[roach context can be accessed...............
+//    Future.delayed(Duration.zero).then((_){
+//      Provider.of<Products>(context).fetchProducts();
+//    });
+  }
+
+//context cant be accessed--------------------------------------------
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+    if(_isInit){
+      Provider.of<Products>(context).fetchProducts();
+    }
+    _isInit = false;
+  }
+
   
  }
 
