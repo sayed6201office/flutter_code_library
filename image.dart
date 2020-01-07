@@ -87,3 +87,38 @@ picking image from gallary
         child: Image.file(file, fit: BoxFit.fitWidth,)
     );
   }
+
+
+
+=============================================================================================
+Image Loading from Network
+=============================================================================================
+                                child: CachedNetworkImage(
+                                  imageUrl:
+                                      'http://honeymoonair.com/media/preview/${hotel['image_id']}/thumb',
+                                  placeholder: (context, url) =>
+                                      Container(
+                                        height: 20,
+                                        width: 20,
+                                        margin: EdgeInsets.all(5),
+                                        child: CircularProgressIndicator(
+                                    strokeWidth: 2.0,
+                                    valueColor: AlwaysStoppedAnimation(
+                                        Theme.of(context).primaryColor),
+                                  )),
+                                  errorWidget: (context, url, error) =>
+                                      new Icon(Icons.error),
+                                  fit: BoxFit.fill,
+                                ),
+
+//                                FadeInImage.assetNetwork(
+//                                    placeholder: 'target.png',
+//                                    fit: BoxFit.cover,
+//                                    image:
+//                                        'http://honeymoonair.com/media/preview/${hotel['image_id']}/thumb'))
+//                            Image(
+//                              height: 150.0,
+//                              width: 220.0,
+//                              image: Image.network('http://honeymoonair.com/media/preview/36/thumb'),
+//                              fit: BoxFit.cover,
+//                            ),
