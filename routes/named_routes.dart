@@ -67,6 +67,15 @@ Navigator.of(context).pushNamed(
   arguments: 'Hello there from the first page!',
 );
 
+----------------------------------------------------------------
+Navigator.of(context).pushNamed(
+                                TourSearchViewScreen.tag,
+                                arguments: {
+                                  'location': _selectedCity,
+                                  'startDate': _startDate,
+                                  'endDate': _endDate
+                                }
+                              );
 
 =============================================================================================
 Retrieving Data in Screen
@@ -74,3 +83,8 @@ Retrieving Data in Screen
 
 final productId =
         ModalRoute.of(context).settings.arguments as String; 
+
+
+        routeData =
+      ModalRoute.of(context).settings.arguments as Map<String, String>;
+      print(routeData['startDate']);
