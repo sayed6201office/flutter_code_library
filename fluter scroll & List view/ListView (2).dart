@@ -273,3 +273,27 @@ class TransactionList extends StatelessWidget {
     );
   }
 }
+
+
+ListView.builder---------------------------------------------------------------------------------------------
+
+      ListView.builder(
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        itemCount: _transportData.length,
+        itemBuilder: (_, index) {
+          return InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                // With MaterialPageRoute, you can pass data between pages,
+                // but if you have a more complex app, you will quickly get lost.
+                MaterialPageRoute(
+                  builder: (context) => HotelDetailsPage(),
+                ),
+              );
+            },
+            child: TransportList(
+              item: _transportData[index],
+            ),
+          );
+        },
+      ),
