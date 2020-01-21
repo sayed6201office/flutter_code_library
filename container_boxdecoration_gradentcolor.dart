@@ -61,3 +61,24 @@ Container(
       width: 300,
       child: child,
     );
+
+=============================================================================================
+Box shadow
+=============================================================================================
+    Container(
+      margin: EdgeInsets.only(top: 150, right: 20, left: 20),
+      height: 600,
+      width: 400,
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.blue.withOpacity(.1),
+                blurRadius: 20,
+                spreadRadius: 10),
+          ]),
+      child: myCard(
+        widgetColor: widgetColor,
+      ),
+    );
