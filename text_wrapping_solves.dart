@@ -38,3 +38,21 @@ used to convert text into number...
                             ),
                           ],
                         ),
+ /*
+===========================================================================================
+Text overflow handling
+===========================================================================================
+*/
+
+                        Flexible(
+                                        child: Text(
+                                          item["address"] == null
+                                              ? ''
+                                              : item["address"],
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.grey,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
