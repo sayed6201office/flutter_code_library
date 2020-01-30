@@ -19,3 +19,27 @@ ListTile(
               icon: Icon(Icons.expand_more),
             ),
           )
+
+
+
+          dateociker
+            date_range_picker: ^1.0.5
+Usage #
+import 'package:date_range_picker/date_range_picker.dart' as DateRagePicker;
+...
+new MaterialButton(
+    color: Colors.deepOrangeAccent,
+    onPressed: () async {
+      final List<DateTime> picked = await DateRagePicker.showDatePicker(
+          context: context,
+          initialFirstDate: new DateTime.now(),
+          initialLastDate: (new DateTime.now()).add(new Duration(days: 7)),
+          firstDate: new DateTime(2015),
+          lastDate: new DateTime(2020)
+      );
+      if (picked != null && picked.length == 2) {
+          print(picked);
+      }
+    },
+    child: new Text("Pick date range")
+)
