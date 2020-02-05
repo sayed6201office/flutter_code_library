@@ -6,7 +6,9 @@ ListView ()
 Wrap(
               children: <Widget>[
                 ListView(
-                  shrinkWrap: true,
+                
+                  physics: NeverScrollableScrollPhysics(),
+                                shrinkWrap: true,
                   children: <Widget>[
                     SizedBox(
                       height: 10,
