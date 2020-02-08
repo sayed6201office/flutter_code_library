@@ -122,3 +122,15 @@ Image Loading from Network
 //                              image: Image.network('http://honeymoonair.com/media/preview/36/thumb'),
 //                              fit: BoxFit.cover,
 //                            ),
+
+//fit image++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Container(
+  width: MediaQuery.of(context).size.width,
+  height: 100,
+  decoration: BoxDecoration(
+    image: DecorationImage(
+      fit: BoxFit.fill,
+      image: NetworkImage("https://picsum.photos/250?image=9"),
+    ),
+  ),
+)

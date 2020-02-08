@@ -56,3 +56,14 @@ Text overflow handling
                                           overflow: TextOverflow.ellipsis,
                                         ),
                                       ),
+
+ /*
+===========================================================================================
+Text Alignment-------
+===========================================================================================
+*/
+
+                                      Align(
+  alignment: Alignment.center, // Align however you like (i.e .centerRight, centerLeft)
+  child: Text("My Text"),
+),
