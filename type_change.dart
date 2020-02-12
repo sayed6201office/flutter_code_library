@@ -13,3 +13,17 @@ DateTime.now().toString();
 123456789012345678901.toStringAsFixed(3);  // 123456789012345683968.000
 1000000000000000000000.toStringAsFixed(3); // 1e+21
 5.25.toStringAsFixed(0); // 5
+
+
+
+---------------------Curent time flutter------------------------------
+		  DateTime now = DateTime.now();
+          String formattedDate = DateFormat('kk:mm').format(now);
+          print('Time : ${formattedDate}');
+
+
+-----------------------Current date time-------------------------------
+
+		  DateFormat format = new DateFormat("HH:mm:ss");
+          DateTime time = format.parse("3:02:00");
+          time.toLocal();

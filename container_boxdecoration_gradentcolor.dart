@@ -55,8 +55,9 @@ Text: softWrap: overflow
                   ),
  
 =============================================================================================
-Round Border
+ Border
 =============================================================================================
+//round border +++++++++++++++++++++++++++++++++++++
 Container(
       decoration: BoxDecoration(
         color: Colors.white,
@@ -69,6 +70,23 @@ Container(
       width: 300,
       child: child,
     );
+
+//BoxDecoration +++++++++++++++++++++++++++++++++++++
+    decoration: BoxDecoration(
+                  border: Border.all(
+                      color: isBtnSelected == 2
+                          ? Colors.white
+                          : Theme
+                          .of(context)
+                          .primaryColor,
+                      width: 3),
+                  borderRadius: BorderRadius.all(Radius.circular(16)),
+                  color: isBtnSelected == 2
+                      ? Theme
+                      .of(context)
+                      .primaryColor
+                      : Colors.white,
+                ),
 
 =============================================================================================
 Box shadow

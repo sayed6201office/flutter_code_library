@@ -53,6 +53,11 @@ Navigator.of(context).pushNamed(
 );
 ...
 
+---------------- replace all named route------------------------
+Navigator.of(context)
+    .pushNamedAndRemoveUntil('/login', (Route<dynamic> route) => false);
+
+
 ----------------RouteGenerator Class------------------------
 
 
