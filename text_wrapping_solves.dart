@@ -67,3 +67,25 @@ Text Alignment-------
   alignment: Alignment.center, // Align however you like (i.e .centerRight, centerLeft)
   child: Text("My Text"),
 ),
+
+
+/*
+===========================================================================================
+Text Alignment-------
+===========================================================================================
+*/
+Container(
+                              width: MediaQuery.of(context).size.width/2 - 50,
+                                child: Wrap(
+                                  children: <Widget>[
+                                    Text(
+                                      '${_topTours['address']}',
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.normal),
+                                      softWrap: true,
+                                      overflow: TextOverflow.ellipsis,
+                                    )
+                                  ],
+                                )),
