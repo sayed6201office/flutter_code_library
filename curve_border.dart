@@ -67,3 +67,23 @@ class ProductItem extends StatelessWidget {
     );
   }
 }
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+clipper example vs ClipPath
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ClipRRect(
+      borderRadius: BorderRadius.only(bottomLeft: Radius.circular(60.0), bottomRight: Radius.circular(60.0)),
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        height: screenHeight * 0.40,
+        decoration: new BoxDecoration(
+          color: const Color(0xff7c94b6),
+          image: new DecorationImage(
+            fit: BoxFit.fill,
+            colorFilter: new ColorFilter.mode(Colors.black.withOpacity(0.2), BlendMode.dstATop),
+              image: AssetImage('assets/guest_images/guest1.jpg'),
+          ),
+        ),
+      ),
+    );
